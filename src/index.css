@@ -1,0 +1,53 @@
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #080810;
+  --surface: #0f0f1a;
+  --surface2: #16162a;
+  --surface3: #1e1e35;
+  --border: #2a2a45;
+  --border2: #35356a;
+  --neon1: #e8ff47;
+  --neon2: #b847ff;
+  --neon3: #47e8ff;
+  --neon4: #ff6b47;
+  --neon5: #47ff9c;
+  --text: #f0f0ff;
+  --muted: #6060a0;
+  --muted2: #8080b0;
+  --danger: #ff4f6a;
+  --success: #47ff9c;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --font-head: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 48px rgba(0,0,0,0.6);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; }
+input, textarea, select { font-family: var(--font-body); outline: none; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes spin   { to { transform: rotate(360deg); } }
+@keyframes pulse  { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+@keyframes float  { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+
+.fade-up { animation: fadeUp 0.5s ease forwards; }
+.float   { animation: float 4s ease-in-out infinite; }
