@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const api = axios.create({ baseURL: "/api" })
+const api = axios.create({ baseURL: "https://event-backend-vxkn.onrender.com/api" })
 let _auth = null
 
 export function setBasicAuth(u, p) {
